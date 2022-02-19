@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #caf0f8;
+  /* background-color: #eeeeee; */
+  /* color: #1c658c; */
+  color: #03045e;
+}
+
+.navbar {
+  background-color: #03045e;
+  height: 50px;
+}
+.homeroute {
+  text-decoration: none;
+  font-size: 20px;
+  position: absolute;
+  top: 8px;
+  left: 48.5%;
+  color: #caf0f8;
+}
+
+.btn-container {
+  margin: 5% 0 2% 4%;
+}
+
+.btn-container > button {
+  margin-right: 40px;
+  cursor: pointer;
+  width: 150px;
+  height: 30px;
+}
+
+.btn-totalarr {
+  margin: 2% 1% 0 0;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 32px;
+  height: 32px;
+}
+
+.btn-active {
+  margin: 2% 1% 0 0;
+  cursor: pointer;
+  color: #2d799f;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 1px solid #2d799f;
+  width: 32px;
+  height: 32px;
+}
+
+.table {
+  border: 1px solid black;
+  width: 60%;
+  margin: 0 20% 0 20%;
+}
+
+.table-tr > th {
+  border: 1px solid black;
+  width: 25%;
+}
+
+.tr-city {
+  cursor: pointer;
+}
+
+.tr-img > img {
+  width: 100%;
+  cursor: pointer;
+  max-height: 180px;
+}
+
+.table-tr > td {
+  border: 1px solid black;
+}
+
+.tr-dist {
+  text-align: left;
+}
+
+.tr-dist > li {
+  margin-left: 20%;
+  width: 75%;
+  overflow-wrap: break-word;
+}
+
+.single-table {
+  margin-bottom: 8%;
+  margin-top: 3%;
+}
+
+.city-name {
+  font-size: 20px;
+}
+
+.polling-span {
+  font-weight: 700;
+}
+
+.single-img {
+  margin-top: 5%;
+  width: 30%;
+}
