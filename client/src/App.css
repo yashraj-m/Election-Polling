@@ -13,17 +13,25 @@ body {
   background-color: #03045e;
   height: 50px;
 }
-.homeroute {
+.homeroute1 {
   text-decoration: none;
   font-size: 20px;
   position: absolute;
   top: 8px;
-  left: 48.5%;
+  left: 10%;
+  color: #caf0f8;
+}
+.homeroute2 {
+  text-decoration: none;
+  font-size: 20px;
+  position: absolute;
+  top: 8px;
+  right: 10%;
   color: #caf0f8;
 }
 
 .btn-container {
-  margin: 5% 0 2% 4%;
+  margin: 3% 0 2% 4%;
 }
 
 .btn-container > button {
@@ -40,6 +48,17 @@ body {
   border: 1px solid white;
   width: 32px;
   height: 32px;
+}
+
+.input-city {
+  margin-bottom: 3%;
+}
+.input-city > input {
+  width: 200px;
+  height: 22px;
+}
+.input-city > button {
+  margin-left: 3%;
 }
 
 .btn-active {

@@ -8,6 +8,7 @@ export const HomePage = () => {
   //console.log("city:", city);
   const navigate = useNavigate();
   const [totalpage, setTotalPage] = useState(1);
+  const [inpsearch, setInpsearch] = useState("");
 
   const [currentpage, setCurrentPage] = useState(1);
 
@@ -73,12 +74,38 @@ export const HomePage = () => {
     getData();
   }, [currentpage, polling]);
 
+  const handleChange = (e) => {
+    e.preventDefault();
+    setInpsearch(e.target.value);
+  };
+
+  String.prototype.toProperCase = function () {
+    return this.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  };
+
+  const searchcity = async (e) => {
+    e.preventDefault();
+    let inp = inpsearch.toProperCase();
+
+    let res = await fetch(`http://localhost:2100/city?city=${inp}`);
+    let data = await res.json();
+
+    setCity(data.city);
+    setTotalPage(0);
+    navigate(`?city=${inp}`);
+  };
   //total = 13997
   return (
     <div>
       <div className="btn-container">
         <button onClick={() => filter("dec")}>Sort by decending</button>
         <button onClick={() => filter("asc")}>Sort by ascending</button>
+      </div>
+      <div className="input-city">
+        <input type="text" placeholder="Search City" onChange={handleChange} />
+        <button onClick={searchcity}>Search</button>
       </div>
       <table className="table">
         <tr className="table-tr">

@@ -42,6 +42,16 @@ router.get("/", async (req, res) => {
     }
     //console.log("page", page);
 
+    if (req.query.city) {
+      const city = await Citys.find({ cityname: req.query.city })
+        .populate("districts")
+        .skip(skip)
+        .limit(limit)
+        .exec();
+
+      return res.status(200).json({ city });
+    }
+
     const city = await Citys.find({})
       .populate("districts")
       .skip(skip)
